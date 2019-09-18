@@ -1,6 +1,6 @@
 # Facebook deep linker
 
-Lightweight JavaScript module to **redirect Facebook web links to *Facebook App* on iOS and Android**, as it should be! Work for Pages, Groups and Profiles links.
+Lightweight JavaScript module to **redirect Facebook web links to Facebook App on iOS and Android**, as it should be! Work for Pages, Groups and Profiles links.
 
 
 ## Why?
