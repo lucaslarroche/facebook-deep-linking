@@ -6,24 +6,23 @@
  * https://github.com/imnotadeveloper/facebook-deep-linking
  * Licensed under MIT License
  */
-
 (function() {
 
   // OS patterns detection based on:
   // https://github.com/hgoebl/mobile-detect.js/blob/master/mobile-detect.js
-  var isIOS       = osPattern('\\biPhone.*Mobile|\\biPod|\\biPad|AppleCoreMedia');
+  var isIOS = osPattern('\\biPhone.*Mobile|\\biPod|\\biPad|AppleCoreMedia');
   var isAndroidOS = osPattern('Android');
 
   // Listen fbLinks clicks on iOs and AndroidOS
   if (isIOS || isAndroidOS) {
 
     var fbLinks = document.querySelectorAll('[data-fbid]');
-    for (var i=0; i < fbLinks.length; i++) {
+    for (var i = 0; i < fbLinks.length; i++) {
 
-      fbLinks[i].addEventListener("click", function() {
+      fbLinks[i].addEventListener('click', function() {
 
         event.preventDefault();
-        var url  = event.toElement.getAttribute("href");
+        var url = event.toElement.getAttribute('href');
         var fbid = event.toElement.dataset.fbid;
 
         // URIs
@@ -54,7 +53,7 @@
   /**
    * Check OS Pattern in User-Agent.
    *
-   * @param {String} pattern
+   * @param {string} pattern
    * @return {boolean}
    */
   function osPattern(pattern) {
